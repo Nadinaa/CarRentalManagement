@@ -1,4 +1,6 @@
-package ro.jademy.carrentals.model;
+package ro.jademy.carrentals.model.users;
+
+import ro.jademy.carrentals.model.RentedCarHistoryItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,6 @@ import java.util.List;
 public class User {
     private String firstName;
     private String lastName;
-    private String username;
     private String password;
     private List<RentedCarHistoryItem> rentedCarHistoryItemList = new ArrayList<>();
 
@@ -21,9 +22,11 @@ public class User {
     }
 
     public String getUsername() {
-        this.username = firstName.concat(".").concat(lastName);
+        return firstName.concat(".").concat(lastName);
+    }
 
-        return username;
+    public List<RentedCarHistoryItem> getRentedCarHistoryItemList() {
+        return rentedCarHistoryItemList;
     }
 
     public RentedCarHistoryItem getCurrentRentedCar() {
@@ -33,5 +36,14 @@ public class User {
             }
         }
         return null;
+    }
+
+    public void showRentedCars(){
+        System.out.println("Your rented cars are: ");
+        for (RentedCarHistoryItem item : rentedCarHistoryItemList) {
+            if (item.isCurrentlyRented()) {
+                System.out.println(rentedCarHistoryItemList.indexOf(item) + 1 + ". " + item);
+            }
+        }
     }
 }
