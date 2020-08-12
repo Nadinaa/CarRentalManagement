@@ -1,6 +1,4 @@
-package ro.jademy.carrentals.users;
-
-import ro.jademy.carrentals.model.User;
+package ro.jademy.carrentals.model.users;
 
 public class Customer extends User {
 
