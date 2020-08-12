@@ -1,4 +1,4 @@
-package ro.jademy.carrentals.model;
+package ro.jademy.carrentals.model.cars;
 
 public class Car {
     // Q: how can we better represent the car make?
@@ -23,13 +23,13 @@ public class Car {
     public double engine;
 
     // Q: how can we better represent money value?
-    public long basePrice;
+    public long rentalPrice;
 
     // Q: do we need a constructor other than the default one?
     // Q: how can we better protect the car data?
 
 
-    public Car(String make, String model, Integer year, String carType, String fuelType, Integer doorNumber, String color, String transmissionType, double engine, long basePrice) {
+    public Car(String make, String model, Integer year, String carType, String fuelType, Integer doorNumber, String color, String transmissionType, double engine, long rentalPrice) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -39,22 +39,20 @@ public class Car {
         this.color = color;
         this.transmissionType = transmissionType;
         this.engine = engine;
-        this.basePrice = basePrice;
+        this.rentalPrice = rentalPrice;
     }
 
     @Override
     public String toString() {
-        return "Car{" +
-                "make='" + make + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
-                ", carType='" + carType + '\'' +
-                ", fuelType='" + fuelType + '\'' +
-                ", doorNumber=" + doorNumber +
-                ", color='" + color + '\'' +
-                ", transmissionType='" + transmissionType + '\'' +
-                ", engine=" + engine +
-                ", basePrice=" + basePrice +
-                '}';
+        return make +
+                "-" + model +
+                ", " + color +
+                ", " + carType +
+                ", " + doorNumber + " doors" +
+                ", year: " + year +
+                ", fuelType: " + fuelType +
+                ", transmissionType: " + transmissionType +
+                ", engine: " + engine +
+                ", rentalPrice: " + rentalPrice + "€/day";
     }
 }
