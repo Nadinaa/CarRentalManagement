@@ -1,6 +1,6 @@
-package ro.jademy.carrentals.model.cars.audiCars;
+package ro.jademy.carrentals.models.cars.audiCars;
 
-import ro.jademy.carrentals.model.cars.Car;
+import ro.jademy.carrentals.models.cars.Car;
 
 public class Audi extends Car {
 

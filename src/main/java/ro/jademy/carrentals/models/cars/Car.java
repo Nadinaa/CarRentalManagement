@@ -1,4 +1,4 @@
-package ro.jademy.carrentals.model.cars;
+package ro.jademy.carrentals.models.cars;
 
 public class Car {
     // Q: how can we better represent the car make?

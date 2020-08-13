@@ -1,6 +1,6 @@
-package ro.jademy.carrentals.model.users;
+package ro.jademy.carrentals.models.users;
 
-import ro.jademy.carrentals.model.RentedCarHistoryItem;
+import ro.jademy.carrentals.models.RentedCarHistoryItem;
 
 import java.util.ArrayList;
 import java.util.List;
