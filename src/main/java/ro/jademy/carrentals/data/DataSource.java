@@ -1,15 +1,15 @@
 package ro.jademy.carrentals.data;
 
-import ro.jademy.carrentals.model.cars.Car;
-import ro.jademy.carrentals.model.users.User;
-import ro.jademy.carrentals.model.cars.audiCars.A6;
-import ro.jademy.carrentals.model.cars.audiCars.A7;
-import ro.jademy.carrentals.model.cars.audiCars.A8;
-import ro.jademy.carrentals.model.cars.bmwCars.Series3;
-import ro.jademy.carrentals.model.cars.bmwCars.Series4;
-import ro.jademy.carrentals.model.cars.bmwCars.Series5;
-import ro.jademy.carrentals.model.users.Customer;
-import ro.jademy.carrentals.model.users.Salesman;
+import ro.jademy.carrentals.models.cars.Car;
+import ro.jademy.carrentals.models.users.User;
+import ro.jademy.carrentals.models.cars.audiCars.A6;
+import ro.jademy.carrentals.models.cars.audiCars.A7;
+import ro.jademy.carrentals.models.cars.audiCars.A8;
+import ro.jademy.carrentals.models.cars.bmwCars.Series3;
+import ro.jademy.carrentals.models.cars.bmwCars.Series4;
+import ro.jademy.carrentals.models.cars.bmwCars.Series5;
+import ro.jademy.carrentals.models.users.Customer;
+import ro.jademy.carrentals.models.users.Salesman;
 
 import java.util.ArrayList;
 import java.util.List;

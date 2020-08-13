@@ -1,7 +1,7 @@
 package ro.jademy.carrentals;
 
 import ro.jademy.carrentals.data.DataSource;
-import ro.jademy.carrentals.model.Shop;
+import ro.jademy.carrentals.models.Shop;
 
 public class Main {
     public static void main(String[] args) {
