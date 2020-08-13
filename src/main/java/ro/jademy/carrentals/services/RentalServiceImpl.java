@@ -23,8 +23,6 @@ public class RentalServiceImpl implements RentalService {
             user.showRentedCars();
             for(RentedCarHistoryItem rentedCar : user.getRentedCarHistoryItemList()){
                 if (rentedCar.isCurrentlyRented()){
-
-
                     System.out.print("Choose the car you want to return: ");
                     Scanner scanner = new Scanner(System.in);
                     int chosenCar = scanner.nextInt();
@@ -32,6 +30,7 @@ public class RentalServiceImpl implements RentalService {
                     user.getRentedCarHistoryItemList().set(chosenCar - 1, rentedCar);
                     DataSource.rentedCarList.remove(rentedCar.getCar());
                     DataSource.availableCarList.add(rentedCar.getCar());
+                    break;
                 }
             }
         } else {

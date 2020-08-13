@@ -19,42 +19,6 @@ public class Shop {
     private FilterService filterService = new FilterServiceImpl();
     private boolean isLoginSuccessful;
 
-    private boolean login(String username, String password) {
-        for (int i = 0; i < DataSource.userList.size(); i++) {
-            if (DataSource.userList.get(i).getUsername().equalsIgnoreCase(username) && DataSource.userList.get(i).getPassword().equals(password)) {
-                user = DataSource.userList.get(i);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public void loginScreen() {
-        do {
-            System.out.println("|----- Welcome! ----|");
-            System.out.println("|-- Please Log in --|\n");
-            System.out.print("|Username: ");
-            String username = scanner.next();
-            System.out.print("|Password: ");
-            String password = scanner.next();
-            isLoginSuccessful = login(username, password);
-            if (isLoginSuccessful) {
-                showWelcomeScreen();
-                showMenu();
-            } else {
-                System.out.println("Invalid credentials!");
-            }
-        } while (!isLoginSuccessful);
-    }
-
-    private void logout() {
-        isLoginSuccessful = false;
-    }
-
-    private void exit() {
-        System.out.println("Bye bye...");
-    }
-
     private void showWelcomeScreen() {
         System.out.println(" -----------------------------------------------");
         System.out.println("|    Welcome to the Jademy Car Rental Service   |");
@@ -187,6 +151,42 @@ public class Shop {
         }
     }
 
+    public void loginScreen() {
+        do {
+            System.out.println("|----- Welcome! ----|");
+            System.out.println("|-- Please Log in --|\n");
+            System.out.print("|Username: ");
+            String username = scanner.next();
+            System.out.print("|Password: ");
+            String password = scanner.next();
+            isLoginSuccessful = login(username, password);
+            if (isLoginSuccessful) {
+                showWelcomeScreen();
+                showMenu();
+            } else {
+                System.out.println("\nInvalid credentials! Please retry!\n");
+            }
+        } while (!isLoginSuccessful);
+    }
+
+    private boolean login(String username, String password) {
+        for (int i = 0; i < DataSource.userList.size(); i++) {
+            if (DataSource.userList.get(i).getUsername().equalsIgnoreCase(username) && DataSource.userList.get(i).getPassword().equals(password)) {
+                user = DataSource.userList.get(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void logout() {
+        isLoginSuccessful = false;
+    }
+
+    private void exit() {
+        System.out.println("Bye bye...");
+    }
+
     public void displayTotalIncome() {
         System.out.println("Total income is: " + totalIncome + "€");
     }
@@ -197,6 +197,7 @@ public class Shop {
 
         // TODO: for a more difficult algorithm, change this method to include date intervals and take into account
         //       weekdays and national holidays in which the discount should be smaller
+
 
         // Q: what should be the return type of this method?
     }
